@@ -1,3 +1,8 @@
+*{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+}
 
 body {
    background-color: rgb(6, 7, 6);
@@ -27,6 +32,7 @@ h1 {
    text-align: right;
    display: flex;
    padding: 5px;
+   display: none;
 }
 .navbar ul{
    display: flex;
@@ -69,6 +75,7 @@ h1 {
 }
 
 .descripcion{
+   
    display: flex;
    flex-direction: row;
    padding: 15px;
@@ -83,7 +90,7 @@ h1 {
    font-size: 30px;
 }
 .tabataDescripcion p{
-   font-size: 15px;
+   font-size: 1.5rem;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    border:rgb(244, 244, 245);
    
@@ -91,6 +98,7 @@ h1 {
 .beneficios{
    background-color:rgba(209, 124, 27, 0.76);
    width: 50%;
+   
    /*height: 100%;*/
 }
 /*.descripcion{
@@ -128,22 +136,107 @@ input, textarea{
 
 .contenedor-galeria{
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr; 
+   grid-template-rows: repeat(8fr, 0.5fr);
    background-size: contain;
    gap: 10px;
+}
 
+.abrir-menu{
+   display: block;
+}
+
+/*media queries para galeria */
 
       
 
+@media screen and (min-width: 600px) {
+   .contenedor-galeria{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+   }
+   
+       
 }
+
+@media screen and (min-width: 1024px) {
+   .menu{
+      display: block;
+      display: flex;
+
+            
+   }
+      .contenedor-galeria{
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: repeat(8 1fr); 
+   }
+   .abrir-menu{
+      display: none;
+   }
+}
+
+      
+
+
+
 .imagen{
-   display: flex;
+   display: grid;
    border:2px solid rgba(209, 124, 27, 0.76);
    object-fit: cover;
-   
-   
-   
-
 
 }
+
+
+/*media queries*/
+
+
+/* Media query para tabletas */
+/*@media (min-width: 600px) {
+   body {
+       padding: 20px;
+   }
+
+   header, section, footer {
+       padding: 20px;
+       text-align: left;
+   }
+
+   h1 {
+       font-size: 2em;
+   }
+
+   h2 {
+       font-size: 1.5em;
+   }
+
+   p {
+       font-size: 1.2em;
+   }
+}*/
+
+/* Media query para computadoras de escritorio */
+/*@media (min-width: 1024px) {
+   body {
+       max-width: 1200px;
+       margin: 0 auto;
+   }
+
+   header, section, footer {
+       display: flex;
+       justify-content: space-between;
+       padding: 30px;
+   }
+
+   h1 {
+       font-size: 2.5em;
+   }
+
+   h2 {
+       font-size: 2em;
+   }
+
+   p {
+       font-size: 1.5em;
+   }
+}*/
