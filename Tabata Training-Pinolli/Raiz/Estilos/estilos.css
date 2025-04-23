@@ -75,7 +75,7 @@ h1 {
 .tabataTraning{ 
    background-color: rgba(209, 124, 27, 0.76);
    background-size: 200px;
-       
+   
  }
 .tabataTraning img {
    width: 100%;
@@ -83,6 +83,10 @@ h1 {
    
  /*contenedor slogan*/  
 }
+.contenido-metodos{
+   background-color: black;
+}
+
 .imagen1{
    background-image:url(//Media/tabata1.jpg);
    background-size: 100% 100%;
@@ -197,9 +201,13 @@ input, textarea{
          font-size: 1.5rem;
       }
       
+   .beneficios h3{
+      font-size: 2rem;
    }
-       
-}
+   .beneficios p{
+      font-size: 1.5rem;
+   }     
+
 
 @media screen and (min-width: 1024px) {
    .menu{
@@ -215,6 +223,9 @@ input, textarea{
    .abrir-menu{
       display: none;
 
+   }
+   .beneficios{
+      text-align: center; 
    }
 }
 
