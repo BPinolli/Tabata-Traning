@@ -5,7 +5,7 @@
 }
 
 body {
-   background-color: rgb(6, 7, 6);
+   background-color: rgb(0, 0, 0);
    margin: 0%;
 
 }
@@ -15,6 +15,9 @@ body {
    background-color: rgba(209, 124, 27, 0.76); 
    text-align: end;  
    height: 50px; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 
 }
 h1 {
@@ -25,7 +28,13 @@ h1 {
    color: azure;
  }
 /*Estilo de menu " inicio galeria metodos contacto*/
-
+.header{
+   display: flex;
+   align-items: center;
+}
+.logo{
+   max-width: 5rem;
+}
 .menu {
    font-family: sans-serif; 
    font-size: 20px;
@@ -33,6 +42,12 @@ h1 {
    display: flex;
    padding: 5px;
    display: none;
+   justify-content: center;
+   
+   
+}
+.abrir-menu{
+   display: flex;
 }
 .navbar ul{
    display: flex;
@@ -43,7 +58,7 @@ h1 {
    
    
 }
-.navbar li{
+.navbar ul li{
    margin: 0 15px;
    flex-direction: row;
 }
@@ -74,23 +89,25 @@ h1 {
       
 }
 
-.descripcion{
-   
-   display: flex;
+.descripcion .container-fluid{
    flex-direction: row;
    padding: 15px;
    margin-bottom: 20px;
+   display: grid;
+   grid-template-columns: 1fr ;
+   grid-template-rows: 1fr;
 }
 .tabataDescripcion{
    background-color:rgba(209, 124, 27, 0.76);
    width: 50%;
    height: 100%;
 }
-.tabataDescripcion h3{
-   font-size: 30px;
-}
-.tabataDescripcion p{
+.tabataDescripcion h3 {
    font-size: 1.5rem;
+   
+}
+.tabataDescripcion .container-fluid p{
+   font-size: 1rem;
    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    border:rgb(244, 244, 245);
    
@@ -98,9 +115,25 @@ h1 {
 .beneficios{
    background-color:rgba(209, 124, 27, 0.76);
    width: 50%;
-   
-   /*height: 100%;*/
+  justify-content: center;
+  display: flex;
+  margin-left: 2rem;
 }
+  /*MEDIA QUERIES PARA .BENEFICIOS*/
+ @media screen and (min-width:600) {
+   .beneficios{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+   }
+   
+ } 
+  
+   
+  
+  
+   /*height: 100%;*/
+
 /*.descripcion{
    display: flex;
    /*background-color: aqua;
@@ -156,7 +189,15 @@ input, textarea{
       grid-template-rows: 1fr 1fr;
 
    }
-   
+   .tabataDescripcion h3{
+      font-size: 2rem;
+      
+   } 
+      .tabataDescripcion p{
+         font-size: 1.5rem;
+      }
+      
+   }
        
 }
 
@@ -173,6 +214,7 @@ input, textarea{
    }
    .abrir-menu{
       display: none;
+
    }
 }
 
@@ -240,3 +282,20 @@ input, textarea{
        font-size: 1.5em;
    }
 }*/
+
+
+/* Media query para pantallas pequeñas (por ejemplo, dispositivos móviles) */
+@media (max-width: 768px) {
+   .container-fluid {
+     width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+     padding: 10px; /* Añade relleno en pantallas pequeñas */
+   }
+ }
+ 
+ /* Media query para pantallas medianas (por ejemplo, tablets) */
+ @media (min-width: 769px) and (max-width: 992px) {
+   .container-fluid {
+     width: 80%; /* Ocupa el 80% del ancho en pantallas medianas */
+     padding: 20px; /* Añade más relleno en pantallas medianas */
+   }
+ }
