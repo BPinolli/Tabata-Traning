@@ -23,14 +23,11 @@ body {
 
 }
 h1 {
-   text-align:center;
-   text-shadow: 5px 5px 5px #2d2e2d;
-
+   text-align:center
  }
  h2 {
    text-align: center;
    color: azure;
-   text-shadow: 5px 5px 5px #2d2e2d;
  }
 /*Estilo de menu " inicio galeria metodos contacto*/
 .header{
@@ -75,11 +72,6 @@ h1 {
    color: rgb(5, 5, 5);  
    padding: 15 20px;
    display: block;
-   
-}
-.menu a:hover{
-   transform: rotate(10deg);
-
 }
 /*contenedor titulo principal*/
 .tabataTraning{ 
@@ -305,11 +297,11 @@ input, textarea{
 }*/
 
 
-/* Media query para pantallas pequeÃ±as (por ejemplo, dispositivos mÃ³viles) */
+/* Media query para pantallas pequeñas (por ejemplo, dispositivos móviles) */
 @media (max-width: 768px) {
    .container-fluid {
-     width: 100%; /* Ocupa todo el ancho en pantallas pequeÃ±as */
-     padding: 10px; /* AÃ±ade relleno en pantallas pequeÃ±as */
+     width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+     padding: 10px; /* Añade relleno en pantallas pequeñas */
    }
  }
  
@@ -317,6 +309,6 @@ input, textarea{
  @media (min-width: 769px) and (max-width: 992px) {
    .container-fluid {
      width: 80%; /* Ocupa el 80% del ancho en pantallas medianas */
-     padding: 20px; /* AÃ±ade mÃ¡s relleno en pantallas medianas */
+     padding: 20px; /* Añade más relleno en pantallas medianas */
    }
 }}
